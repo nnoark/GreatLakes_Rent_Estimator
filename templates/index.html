@@ -1,0 +1,100 @@
+<html>
+<body>
+    <h3>Great Lakes Rent Predictions</h3>
+<div>
+    <form action='/result' method='POST'>
+        <label for='region'>Region</label>
+        <select id='region' name='region'>
+            <option value = '0'>Akron,OH</option>
+            <option value = '1'>Albany,NY</option>
+            <option value = '2'>Altoona, PA</option>
+            <option value = '3'>Ann Arbor, MI</option>
+            <option value = '4'>Appleton, WI</option>
+            <option value = '5'>Ashtabula,OH</option>
+            <option value = '6'>Athens, OH</option>
+            <option value = '7'>Battle Creek,MI</option>
+            <option value = '8'>Bemidji,MN</option>
+            
+        </select>
+        <br>
+        <label for='type'>Type</label>
+        <select id='type' name='type'>
+            <option value="0">Apartment</option>
+            <option value="5">House</option>
+            <option value="1">Condo</option>
+            <option value="9">Townhouse</option>
+            <option value="3">Duplex</option>
+            <option value="8">Manufactured</option>
+            <option value="6">In-Law</option>
+            <option value="2">Cottage/Cabin</option>
+            <option value="7">Loft</option>
+            <option value="4">Flat</option>
+        </select>
+        <br>
+        <label for='sqfeet'>Square Feet</label>
+        <input type='text' id='sqfeet' name='sqfeet'>
+        <br>
+        <label for='beds'>Bedrooms</label>
+        <input type='text' id='beds' name='beds'>[0-5]
+        <br>
+        <label for='baths'>Bathrooms</label>
+        <input type='text' id='baths' name='baths'>[0-5]
+        <br>
+        <label for="pets_allowed">Pets Allowed?</label>
+        <select id='pets_allowed' name='pets_allowed'>
+            <option value='0'>No</option>
+            <option value='1'>Yes</option>
+        </select>
+        <br>
+        <label for="smoking_allowed">Smoking?</label>
+        <select name="smoking_allowed" id="smoking_allowed">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+        <br>
+        <label for="wheelchair_access">Wheelchair Access?</label>
+        <select name="wheelchair_access" id="wheelchair_access">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+        <br>
+        <label for="electric_vehicle_charge">Electric Vehicle Charge?</label>
+        <select name="electric_vehicle_charge" id="electric_vehicle_charge">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+        <br>
+        <label for="comes_furnished">Comes Furnished?</label>
+        <select name="comes_furnished" id="comes_furnished">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+        <br>
+        <label for="laundry_options">Laundry Options</label>
+        <select name="laundry_options" id="laundry_options">
+            <option value="0">Laundry in the Building</option>
+            <option value="1">Laundry on Site</option>
+            <option value="2">No Laundry on Site</option>
+            <option value="3">Washer and Dryer Hookups</option>
+            <option value="4">Washer Dryer Hookups in Unit</option>
+        </select>
+        <br>
+        <label for="parking_options">Parking Options</label>
+        <select name="parking_options" id="parking_options">
+            <option value="0">Attached Garage</option>
+            <option value="1">Carport</option>
+            <option value="2">Detatched Garage</option>
+            <option value="3">No Parking</option>
+            <option value="4">Off-Street Parking</option>
+            <option value="5">Street Parking</option>
+            <option value="6">Valet Parking</option>
+        </select>
+        <br>
+        <input type="submit" value="Submit">
+
+
+        
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+body, html {
+    height: 100%;
+}
+
+.bg {
+    background-image: url(https://images.pexels.com/photos/1612351/pexels-photo-1612351.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.entry-box {
+    position: absolute;
+    top: 7%;
+    right: 7%;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 11px;
+}

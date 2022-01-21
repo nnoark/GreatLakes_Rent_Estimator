@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 
 app = Flask(__name__)
-model = pickle.load(open('model.pkl','rb'))
+model = pickle.load(open('models\model.pkl','rb'))
 
 # prediction function
 def ValuePredictor(to_predict_list):

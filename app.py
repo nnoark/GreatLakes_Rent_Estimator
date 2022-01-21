@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request
 import pickle
 import numpy as np
 
@@ -11,7 +11,7 @@ def ValuePredictor(to_predict_list):
     result = model.predict(to_predict)
     return result[0]
 
-@app.route('/')
+@app.route('/',methods= ['GET'])
 def index():     
     return render_template('index.html')
  

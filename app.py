@@ -17,7 +17,7 @@ def index():
  
 @app.route('/result', methods = ['POST'])
 def result():
-    if request == 'POST':
+    if request.method == 'POST':
         to_predict_list = request.form.to_dict()
         to_predict_list = list(to_predict_list.values())
         to_predict_list = list(map(int, to_predict_list))

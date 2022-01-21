@@ -15,4 +15,4 @@ scikit_learn == 0.24.1
 
 gunicorn == 20.1.0
 
-pickle == 4.0
+

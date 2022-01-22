@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ url_for('templates/static', filename='style.css')}}">
+    <!-- <link rel="stylesheet" href="{{ url_for('templates/static', filename='style.css')}}"> -->
     <link rel="stylesheet" href="static/style.css">
     
 
@@ -22,12 +22,12 @@
 
 <body class="bg">
 
-    <div style="border: 1px red solid;" class="container col-md-5 shadow rounded content-area text-area">
+    <div class="container col-md-5 shadow rounded content-area text-area">
         <h1> Hi, Welcome to Great Lakes Rent Estimator.</h1>
         <h2>GLRE is the fastest way to find out the "going rents" - anywhere in the Great Lake States!</h2>
     </div>
         
-    <div style="border: 1px green solid;" class="container col-md-5 shadow rounded content-area entry-box">
+    <div style="border: 1px #ccc solid;" class="container col-md-5 shadow rounded content-area entry-box">
         <form action='/result' method='POST'>
             <div class="row">
                 <h2>Fill out the form below to get your estimate.</h2>
@@ -267,10 +267,16 @@
     </div>
        
     <div><input class="col-md-5 submit" type="submit" value="Get Estimate"></div>
+
     
-        </form>
+
+    </form>
+
+        
     </div>
-    
 
 </body>
 </html>
+
+<div class="result" align="center">    
+    

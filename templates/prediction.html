@@ -1,6 +1,50 @@
 <!DOCTYPE html>
 <html>
-<body>
-	<h1> {{ prediction }}</h1>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="{{ url_for('templates/static', filename='style.css')}}"> -->
+    <!-- <link rel="stylesheet" href="static/style.css"> -->
+	<style>
+		.bg {
+    		background-image: url(https://images.pexels.com/photos/1612351/pexels-photo-1612351.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    		height: 100%;
+    		background-position: center;
+    		background-repeat: no-repeat;
+    		background-size: cover;
+		}
+		body, html {
+    		height: 100%;
+    		font-family: 'Open Sans', sans-serif;
+		}
+		.result-box {
+			margin: auto;
+			margin-top: 10%;
+			width: 30%;
+			border: 1px solid #ccc;
+			padding: 70px 0;
+			text-align: center;
+			background: rgba(255,255,255,0.9);
+		}
+	</style>
+</head>
+
+
+<body class="bg">
+
+	
+				<div class="result-box rounded">
+					<h3>Your Predicted Rent Is:</h3>
+					<h1>{{prediction}}</h1>
+					<br>
+					<a href="/">Go Back</a>
+				</div>
+			
 </body>
 </html>

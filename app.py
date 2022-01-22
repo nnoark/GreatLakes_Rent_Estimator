@@ -1,10 +1,10 @@
 from flask import Flask, render_template, request
 import pickle
 import numpy as np
-from werkzeug.utils import append_slash_redirect, redirect
+
 
 app = Flask(__name__)
-model = pickle.load(open('models\model.pkl','rb'))
+model = pickle.load(open('./models/model.pkl','rb'))
 
 # prediction function
 def ValuePredictor(to_predict_list):

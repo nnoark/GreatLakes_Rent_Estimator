@@ -1,14 +1,16 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request
 import pickle
 import numpy as np
 
+model = pickle.load(open('./models/model.pkl','rb'))
+
 app = Flask(__name__)
 
+##testing
 # prediction function
 def ValuePredictor(to_predict_list):
     to_predict = np.array(to_predict_list).reshape(1, 12)
-    loaded_model = pickle.load(open("model.pkl", "rb"))
-    result = loaded_model.predict(to_predict)
+    result = model.predict(to_predict)
     return result[0]
 
 @app.route('/')

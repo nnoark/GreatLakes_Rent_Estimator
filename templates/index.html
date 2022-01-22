@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    
 </head>
 
 <body class="bg">
@@ -178,6 +178,7 @@
                 <label for="beds" style="padding-right: 5%;">Bedrooms</label>
                     <input type='text' id='beds' name='beds'>[0-5]
             </div>
+            <br>
             <div class="row">
                 <label for="pets_allowed">Pets Allowed?</label>
                     <select id='pets_allowed' name='pets_allowed'>
@@ -185,6 +186,7 @@
                         <option value='1'>Yes</option>
                     </select>
             </div>
+            <br>
             <div class="row">
                 <label for="wheelchair_access">Wheelchair Access?</label>
                     <select name="wheelchair_access" id="wheelchair_access">
@@ -192,6 +194,7 @@
                         <option value="1">Yes</option>
                     </select>
             </div>
+            <br>
             <div class="row">
                 <label for="comes_furnished">Comes Furnished?</label>
                 <select name="comes_furnished" id="comes_furnished">
@@ -199,7 +202,7 @@
                     <option value="1">Yes</option>
                 </select>
             </div>
-
+            <br>
             <div class="row">
                 <label for="parking_options">Parking Options</label>
                     <select name="parking_options" id="parking_options">

@@ -14,17 +14,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="{{ url_for('templates/static', filename='style.css')}}"> -->
-    <!-- <link rel="stylesheet" href="static/style.css"> -->
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"> -->
-    <!-- <link rel="stylesheet" href="static/style.css"> -->
+    
 
     <style>
-        body, html {
+
+body, html {
     height: 100%;
     font-family: 'Open Sans', sans-serif;
 }
-label, input, select{
+label, input, select {
     font-family: 'Open Sans', sans-serif;
     font-size: small;
     
@@ -91,6 +89,10 @@ input,select {
     width: 100px;
     margin-left: 10px;
 }
+
+.container {
+    font-family: 'Open Sans', sans-serif;
+}
     </style>
     
 
@@ -98,9 +100,15 @@ input,select {
 
 <body class="bg">
 
-    <div class="container col-md-5 shadow rounded content-area text-area">
-        <h1> Hi, Welcome to Great Lakes Rent Estimator.</h1>
-        <h2>GLRE is the fastest way to find out the "going rents" - anywhere in the Great Lake States!</h2>
+    <div class="container col-md-5 shadow rounded content-area text-area" style="font-family: 'Open Sans' sans-serif;" >
+        <p style="font-size: 50px;"> Welcome to the Great Lakes Rent Estimator.</p>
+        <br><br><br>
+        <h2 style="font-size: 35px; font-family: 'Open Sans' sans-serif;">GLRE is the fastest way to find out the "going rents" - anywhere in the Great Lake States.</h2>
+        <br><br>
+        <h2 style="text-indent: 5%; font-size: 27px; font-family: 'Open Sans' sans-serif;">The Great Lakes Rent Estimator uses a machine learning model trained on over 51,000 recent rental listings on Craigslist within the Great Lakes States to 
+            predict the price of a rental listing based on common housing amenities. With GLRE, the market no longer has to remain a mystery. By analyzing the listings in the surrounding region, 
+            GLRE can calculate rent prices based on similar listings and provide a market rate estimate -- or let you know if you're currently paying too much.  </h3>    
+        </h2>
     </div>
         
     <div style="border: 1px #ccc solid;" class="container col-md-5 shadow rounded content-area entry-box">
@@ -250,17 +258,67 @@ input,select {
 
             <div class="row" style="padding-top: 10px;">
                 <label for='sqfeet' style="padding-right: 15px; padding-left: 5px; padding-top: 10px;">Square Feet</label>
+
             </div>
             <div class="row">
-                <input type='text' id='sqfeet' name='sqfeet' style="height: 40px; width: 100%;">
+                <select type='text' id='sqfeet' name='sqfeet' style="height: 40px; width: 100%;">
+                    <option value="100">100</option>
+                    <option value="200">200</option>
+                    <option value="300">300</option>
+                    <option value="400">400</option>
+                    <option value="500">500</option>
+                    <option value="600">600</option>
+                    <option value="700">700</option>
+                    <option value="800">800</option>
+                    <option value="900">900</option>
+                    <option value="1000">1000</option>
+                    <option value="1100">1100</option>
+                    <option value="1200">1200</option>
+                    <option value="1300">1300</option>
+                    <option value="1400">1400</option>
+                    <option value="1500">1500</option>
+                    <option value="1600">1600</option>
+                    <option value="1700">1700</option>
+                    <option value="1800">1800</option>
+                    <option value="1900">1900</option>
+                    <option value="2000">2000</option>
+                    <option value="2100">2100</option>
+                    <option value="2200">2200</option>
+                    <option value="2300">2300</option>
+                    <option value="2400">2400</option>
+                    <option value="2500">2500</option>
+                    <option value="2600">2600</option>
+                    <option value="2700">2700</option>
+                    <option value="2800">2800</option>
+                    <option value="2900">2900</option>
+                    <option value="3000">3000</option>
+                    <option value="3100">3100</option>
+                    <option value="3200">3200</option>
+                    <option value="3300">3300</option>
+                    <option value="3400">3400</option>
+                    <option value="3500">3500</option>
+                    <option value="3600">3600</option>
+                    <option value="3700">3700</option>
+                    <option value="3800">3800</option>
+                    <option value="3900">3900</option>
+                    <option value="4000">4000</option>
+                </select>
+                    
             </div>
             <!-- end of row -->
 <!-------------------------------------------------------------------------------------->
     <div>
-        <div class="column"> <!--left side entry box col-->
+        <div class="column" > <!--left side entry box col-->
             <div class="row" style="padding-top: 5%;">
                 <label for="beds" style="padding-right: 5%;">Bedrooms</label>
-                    <input style="margin-left: 10px; margin-right: 10px; height: 30px;" type='text' id='beds' name='beds'>[0-5]
+                    <select style="margin-left: 10px; margin-right: 10px; height: 30px; width: 100px;" type='text' id='beds' name='beds'>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
             </div>
             <br>
             <div class="row">
@@ -307,7 +365,14 @@ input,select {
             
             <div class="row" style="padding-top: 5%;">
                 <label style="padding-right: 5%;" for='baths'>Bathrooms</label>
-                    <input style="height: 30px;" style="margin-left: 10px; margin-right: 10px;" type='text' id='baths' name='baths'>[0-5]
+                <select style="margin-left: 10px; margin-right: 10px; height: 30px; width: 100px;" type='text' id='beds' name='baths'>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
             </div>
             <br>
             <div class="row">

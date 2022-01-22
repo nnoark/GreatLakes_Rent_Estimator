@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="{{ url_for('templates/static', filename='style.css')}}"> -->
-    <!-- <link rel="stylesheet" href="static/style.css"> -->
+    
 	<style>
 		.bg {
     		background-image: url(https://images.pexels.com/photos/1612351/pexels-photo-1612351.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
@@ -40,10 +39,11 @@
 
 	
 				<div class="result-box rounded">
-					<h3>Your Predicted Rent Is:</h3>
-					<h1>{{prediction}}</h1>
+					<h1 >Your Predicted Monthly Rent Is:</h1>
 					<br>
-					<a href="/">Go Back</a>
+					<h1>$ {{prediction}}</h1>
+					<br><br>
+					<a href="/" style="font-size:medium ;">Go Back</a>
 				</div>
 			
 </body>

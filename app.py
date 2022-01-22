@@ -6,7 +6,7 @@ model = pickle.load(open('./models/model.pkl','rb'))
 
 app = Flask(__name__)
 
-
+##testing
 # prediction function
 def ValuePredictor(to_predict_list):
     to_predict = np.array(to_predict_list).reshape(1, 12)

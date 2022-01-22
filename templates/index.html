@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="{{ url_for('templates/Static', filename='style.css')}}"> -->
+    <link rel="stylesheet" href="{{ url_for('templates/Static', filename='style.css')}}">
     <link rel="stylesheet" href="Static\style.css">
     
 
@@ -227,6 +227,7 @@
                 <label for='baths'>Bathrooms</label>
                     <input type='text' id='baths' name='baths'>[0-5]
             </div>
+            <br>
             <div class="row">
                 <label for="smoking_allowed">Smoking?</label>
                     <select name="smoking_allowed" id="smoking_allowed">
@@ -234,6 +235,7 @@
                         <option value="1">Yes</option>
                     </select>
             </div>
+            <br>
             <div class="row">
                 <label for="electric_vehicle_charge">Electric Vehicle Charge?</label>
                     <select name="electric_vehicle_charge" id="electric_vehicle_charge">
@@ -241,6 +243,7 @@
                         <option value="1">Yes</option>
                     </select>
             </div>
+            <br>
             <div class="row">
                 <label for="laundry_options">Laundry Options</label>
                     <select name="laundry_options" id="laundry_options">
@@ -251,11 +254,12 @@
                         <option value="4">Washer Dryer Hookups in Unit</option>
                     </select>
             </div>
+            <br>
 
         </div>
     </div>
        
-            <input class="col-md-4" type="submit" value="Get Estimate">
+            <div class="row"><input class="col-md-4" type="submit" value="Get Estimate"></div>
     
         </form>
     </div>

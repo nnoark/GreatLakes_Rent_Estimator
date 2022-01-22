@@ -14,15 +14,20 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ url_for('templates/Static', filename='style.css')}}">
-    <link rel="stylesheet" href="Static\style.css">
+    <link rel="stylesheet" href="{{ url_for('templates/static', filename='style.css')}}">
+    <link rel="stylesheet" href="static/style.css">
     
 
 </head>
 
 <body class="bg">
+
+    <div style="border: 1px red solid;" class="container col-md-5 shadow rounded content-area text-area">
+        <h1> Hi, Welcome to Great Lakes Rent Estimator.</h1>
+        <h2>GLRE is the fastest way to find out the "going rents" - anywhere in the Great Lake States!</h2>
+    </div>
         
-    <div class="container col-md-5 shadow rounded content-area entry-box">
+    <div style="border: 1px green solid;" class="container col-md-5 shadow rounded content-area entry-box">
         <form action='/result' method='POST'>
             <div class="row">
                 <h2>Fill out the form below to get your estimate.</h2>
@@ -31,8 +36,8 @@
             <div class="row" style="padding-right: 5px; padding-top: 10px;">
                 <label style="padding-left: 5px; padding-right: 35px; " for="region">Region</label>
             </div>
-            <div class="row;" style="padding-left: 5px;">
-                <select id='region' name='region' style="height: 25px; width: 100%">
+            <div class="row;" >
+                <select id='region' name='region' style="height: 40px; width: 100%">
                     <option value = '0'>Akron, OH</option>
                     <option value = '1'>Albany, NY</option>
                     <option value = '2'>Altoona, PA</option>
@@ -152,7 +157,7 @@
                 <label for='type' style="padding-top: 10px;">Housing Type</label>
             </div>
             <div class="row" >
-                <select id='type' name='type' style="padding-left: 10px; height: 25px; width: 100%;">
+                <select id='type' name='type' style="padding-left: 10px; height: 40px; width: 100%;">
                     <option value="0">Apartment</option>
                     <option value="5">House</option>
                     <option value="1">Condo</option>
@@ -171,19 +176,20 @@
                 <label for='sqfeet' style="padding-right: 15px; padding-left: 5px; padding-top: 10px;">Square Feet</label>
             </div>
             <div class="row">
-                <input type='text' id='sqfeet' name='sqfeet' style="height: 25px; width: 100%;">
+                <input type='text' id='sqfeet' name='sqfeet' style="height: 40px; width: 100%;">
             </div>
             <!-- end of row -->
+<!-------------------------------------------------------------------------------------->
     <div>
         <div class="column"> <!--left side entry box col-->
             <div class="row" style="padding-top: 5%;">
                 <label for="beds" style="padding-right: 5%;">Bedrooms</label>
-                    <input type='text' id='beds' name='beds'>[0-5]
+                    <input style="margin-left: 10px; margin-right: 10px; height: 30px;" type='text' id='beds' name='beds'>[0-5]
             </div>
             <br>
             <div class="row">
                 <label for="pets_allowed">Pets Allowed?</label>
-                    <select id='pets_allowed' name='pets_allowed'>
+                    <select style="height: 30px;" class="dropdown" id='pets_allowed' name='pets_allowed'>
                         <option value='0'>No</option>
                         <option value='1'>Yes</option>
                     </select>
@@ -191,7 +197,7 @@
             <br>
             <div class="row">
                 <label for="wheelchair_access">Wheelchair Access?</label>
-                    <select name="wheelchair_access" id="wheelchair_access">
+                    <select style="height: 30px;" class="dropdown" name="wheelchair_access" id="wheelchair_access">
                         <option value="0">No</option>
                         <option value="1">Yes</option>
                     </select>
@@ -199,7 +205,7 @@
             <br>
             <div class="row">
                 <label for="comes_furnished">Comes Furnished?</label>
-                <select name="comes_furnished" id="comes_furnished">
+                <select style="height: 30px;" class="dropdown" name="comes_furnished" id="comes_furnished">
                     <option value="0">No</option>
                     <option value="1">Yes</option>
                 </select>
@@ -207,7 +213,7 @@
             <br>
             <div class="row">
                 <label for="parking_options">Parking Options</label>
-                    <select name="parking_options" id="parking_options">
+                    <select style="height: 30px;" class="dropdown" name="parking_options" id="parking_options">
                         <option value="0">Attached Garage</option>
                         <option value="1">Carport</option>
                         <option value="2">Detatched Garage</option>
@@ -224,13 +230,13 @@
         <div class="column"> <!--right side entry box col-->
             
             <div class="row" style="padding-top: 5%;">
-                <label for='baths'>Bathrooms</label>
-                    <input type='text' id='baths' name='baths'>[0-5]
+                <label style="padding-right: 5%;" for='baths'>Bathrooms</label>
+                    <input style="height: 30px;" style="margin-left: 10px; margin-right: 10px;" type='text' id='baths' name='baths'>[0-5]
             </div>
             <br>
             <div class="row">
                 <label for="smoking_allowed">Smoking?</label>
-                    <select name="smoking_allowed" id="smoking_allowed">
+                    <select style="height: 30px;" class="dropdown" name="smoking_allowed" id="smoking_allowed">
                         <option value="0">No</option>
                         <option value="1">Yes</option>
                     </select>
@@ -238,7 +244,7 @@
             <br>
             <div class="row">
                 <label for="electric_vehicle_charge">Electric Vehicle Charge?</label>
-                    <select name="electric_vehicle_charge" id="electric_vehicle_charge">
+                    <select style="height: 30px;" class="dropdown" name="electric_vehicle_charge" id="electric_vehicle_charge">
                         <option value="0">No</option>
                         <option value="1">Yes</option>
                     </select>
@@ -246,7 +252,7 @@
             <br>
             <div class="row">
                 <label for="laundry_options">Laundry Options</label>
-                    <select name="laundry_options" id="laundry_options">
+                    <select style="height: 30px;" class="dropdown" name="laundry_options" id="laundry_options">
                         <option value="0">Laundry in the Building</option>
                         <option value="1">Laundry on Site</option>
                         <option value="2">No Laundry on Site</option>
@@ -257,9 +263,10 @@
             <br>
 
         </div>
+        
     </div>
        
-            <div class="row"><input class="col-md-4" type="submit" value="Get Estimate"></div>
+    <div><input class="col-md-5 submit" type="submit" value="Get Estimate"></div>
     
         </form>
     </div>
